@@ -1,0 +1,29 @@
+﻿body {
+}
+h1 {
+    text-align:center;
+}
+h3 {
+    text-align:center;
+}
+.pageHeader {
+    background-color: lawngreen;
+}
+.pageFooter {
+    background-color: darkolivegreen;
+}
+.errorText {
+    color:red;
+}
+div.container4 {
+    height: 10em;
+    position: relative;
+}
+div.container4 p {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}

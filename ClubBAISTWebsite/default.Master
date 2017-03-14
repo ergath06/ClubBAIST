@@ -1,0 +1,27 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="default.master.cs" Inherits="ClubBAISTWebsite._default" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Club BAIST Website</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="Primary.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder ID="BodyHeader" runat="server">
+        <h1 class="pageHeader">Club BAIST Website</h1>
+        </asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder ID="BodyContent" runat="server">
+        <h3>Some default content in here.</h3>
+        </asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder ID="BodyFooter" runat="server">
+        <h3 class="pageFooter">Business Info  |  Contact Us</h3>
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
