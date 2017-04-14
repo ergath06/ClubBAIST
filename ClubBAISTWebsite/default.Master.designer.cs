@@ -40,6 +40,51 @@ namespace ClubBAISTWebsite {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder BodyHeader;
         
         /// <summary>
+        /// LoginLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink LoginLink;
+        
+        /// <summary>
+        /// NewApplicationLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink NewApplicationLink;
+        
+        /// <summary>
+        /// NewReservationLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink NewReservationLink;
+        
+        /// <summary>
+        /// SearchReservationLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink SearchReservationLink;
+        
+        /// <summary>
+        /// DeleteReservationLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink DeleteReservationLink;
+        
+        /// <summary>
         /// BodyContent control.
         /// </summary>
         /// <remarks>

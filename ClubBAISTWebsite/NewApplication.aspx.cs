@@ -37,7 +37,8 @@ namespace ClubBAISTWebsite
                 if (bConfirmation)
                 {
                     labMessage.ForeColor = System.Drawing.Color.DarkGreen;
-                    labMessage.Text = "Successfully Added New User.<br />";
+                    labMessage.Text = "<br /><br />Successfully Added New User.<br />";
+                    labMessage.Visible = true;
                     tbEmail.Text = "";
                     tbName.Text = "";
                     tbPass.Text = "";

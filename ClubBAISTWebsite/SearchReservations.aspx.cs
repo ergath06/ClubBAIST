@@ -119,6 +119,12 @@ namespace ClubBAISTWebsite
                 }
                 OutputTable.Rows.Add(row);
             }
+
+            if (OutputTable.Rows.Count <= 0)
+            {
+                labMessage.ForeColor = System.Drawing.Color.Red;
+                labMessage.Text = "No Reservations found for that time period!";
+            }
         }
     }
 }

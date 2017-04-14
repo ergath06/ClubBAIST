@@ -14,6 +14,13 @@
     <div>
         <asp:ContentPlaceHolder ID="BodyHeader" runat="server">
         <h1 class="pageHeader">Club BAIST Website</h1>
+            <p>
+                <asp:HyperLink runat="server" ID="LoginLink" Target="_self" NavigateUrl="~/Login.aspx" >Login</asp:HyperLink>&nbsp;
+                <asp:HyperLink runat="server" ID="NewApplicationLink" Target="_self" NavigateUrl="~/NewApplication.aspx" >New Application</asp:HyperLink>&nbsp;
+                <asp:HyperLink runat="server" ID="NewReservationLink" Target="_self" NavigateUrl="~/NewReservation.aspx" >New Reservation</asp:HyperLink>&nbsp;
+                <asp:HyperLink runat="server" ID="SearchReservationLink" Target="_self" NavigateUrl="~/SearchReservations.aspx" >Search Reservations</asp:HyperLink>&nbsp;
+                <asp:HyperLink runat="server" ID="DeleteReservationLink" Target="_self" NavigateUrl="~/DeleteReservations.aspx" >Delete Reservations</asp:HyperLink>&nbsp;
+            </p>
         </asp:ContentPlaceHolder>
         <asp:ContentPlaceHolder ID="BodyContent" runat="server">
         <h3>Some default content in here.</h3>

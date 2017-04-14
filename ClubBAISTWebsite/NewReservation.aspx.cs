@@ -121,22 +121,23 @@ namespace ClubBAISTWebsite
 
         public void GenerateDisabledDays() //Generate additional diabled days based on selected user for whom the reservation is being created under
         {
-            OneOffs = new List<DateTime>();
-            loc = system.GetHours(Convert.ToInt16(ddlLocations.Text), DateTime.Now);
-            foreach (AltLocHour alt in loc.AltHours)
-            {
-                if (!alt.OpenToday)
+                OneOffs = new List<DateTime>();
+                loc = system.GetHours(Convert.ToInt16(ddlLocations.Text), DateTime.Now);
+                foreach (AltLocHour alt in loc.AltHours)
                 {
-                    OneOffs.Add(alt.Date);
+                    if (!alt.OpenToday)
+                    {
+                        OneOffs.Add(alt.Date);
+                    }
                 }
-            }
-            foreach (Reservation reserve in reservationList)
-            {
-                if (reserve.Email == tbUser.Text)
+
+                foreach (Reservation reserve in reservationList)
                 {
-                    OneOffs.Add(reserve.DateTime);
+                    if (reserve.Email == tbUser.Text)
+                    {
+                        OneOffs.Add(reserve.DateTime);
+                    }
                 }
-            }
         }
 
         protected void calReservations_SelectionChanged(object sender, EventArgs e)

@@ -788,3 +788,5 @@ GO
 --exec spGetHours 1, '2017/03/12'  --Tests spGetHours stored proc, can change depending on needs
 
 --exec spGetReservations 1, '2017/03/12'  --Tests reservations grab to ensure checks are working proper
+
+--update Users SET approvedFlag = 1 WHERE email LIKE 'test@t.com'

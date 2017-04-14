@@ -150,30 +150,44 @@ namespace ClubBAISTWebsite
 
         protected void butDelete_Click(object sender, EventArgs e)
         {
-            if (labMessage.Text == "")
+            if (ddlReservations.SelectedValue != "")
             {
-                labMessage.ForeColor = System.Drawing.Color.Red;
-                labMessage.Text = "Are you sure you want to delete reservation number " + ddlReservations.SelectedValue + "?";
-            }
-            else
-            {
-                //Now try to delete the reservation
-                ClubBaistSystem system = new ClubBaistSystem();
-                bool bSuccess = false;
-                bSuccess = system.DeleteReservation(Convert.ToInt64(ddlReservations.SelectedValue));
-                if (bSuccess)
+                ddlReservations.Visible = true;
+                butDelete.Visible = true;
+                labMessage.ForeColor = System.Drawing.Color.DarkGreen;
+                labMessage.Text = "";
+                if (labMessage.Text == "")
                 {
-                    labMessage.ForeColor = System.Drawing.Color.Black;
-                    labMessage.Text = "Delete Successful!";
-                    ddlReservations.Visible = false;
-                    butDelete.Visible = false;
-                    labReservationID.Visible = false;
+                    labMessage.ForeColor = System.Drawing.Color.Red;
+                    labMessage.Text = "Are you sure you want to delete reservation number " + ddlReservations.SelectedValue + "?";
                 }
                 else
                 {
-                    labMessage.ForeColor = System.Drawing.Color.Red;
-                    labMessage.Text = "Delete Failed!";
+                    //Now try to delete the reservation
+                    ClubBaistSystem system = new ClubBaistSystem();
+                    bool bSuccess = false;
+                    bSuccess = system.DeleteReservation(Convert.ToInt64(ddlReservations.SelectedValue));
+                    if (bSuccess)
+                    {
+                        labMessage.ForeColor = System.Drawing.Color.Black;
+                        labMessage.Text = "Delete Successful!";
+                        ddlReservations.Visible = false;
+                        butDelete.Visible = false;
+                        labReservationID.Visible = false;
+                    }
+                    else
+                    {
+                        labMessage.ForeColor = System.Drawing.Color.Red;
+                        labMessage.Text = "Delete Failed!";
+                    }
                 }
+            }
+            else
+            {
+                ddlReservations.Visible = false;
+                butDelete.Visible = false;
+                labMessage.ForeColor = System.Drawing.Color.Red;
+                labMessage.Text = "No reservations exist for that time frame!";
             }
         }
     }
